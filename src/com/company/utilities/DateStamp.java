@@ -7,7 +7,7 @@ import java.util.Date;
 public class DateStamp {
 
     public static String getStringFromDate(Date date) {
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         return dateFormat.format(date);
     }
 }

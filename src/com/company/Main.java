@@ -5,32 +5,15 @@ import com.company.pastries.Cake;
 import com.company.pastries.ChocholateStrawberryCake;
 import com.company.pastries.Size;
 import com.company.utilities.Configuration;
-
 import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        setupLoggers();
 //        excerciseOne();
 //        excerciseTwo();
         excerciseThree();
-    }
-
-    public static void setupLoggers() throws IOException {
-        Logger rootLogger = Logger.getLogger("");
-        rootLogger.removeHandler(rootLogger.getHandlers()[0]);
-
-        Logger logger = Logger.getLogger("Bakery.Main");
-        FileHandler fileHandler = new FileHandler("log.txt");
-        fileHandler.setFormatter( new SimpleFormatter() );
-        logger.addHandler( fileHandler );
-        logger.setLevel( Level.FINE );
     }
 
     private static void excerciseOne() {

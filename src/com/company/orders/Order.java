@@ -21,8 +21,8 @@ public class Order {
     private ArrayList<Cake> orderedCakes = new ArrayList<>();
 
     public void setId() {
-        this.id = Configuration.ORDER_ID;
-        Configuration.ORDER_ID++;
+        this.id = Configuration.orderId;
+        Configuration.orderId++;
     }
 
     public int getId() {
@@ -81,7 +81,7 @@ public class Order {
         this.customer = customer;
     }
 
-    public double getOrderPrice(){
+    private double getOrderPrice(){
         double price = 0;
         for (Cake cake :
                 orderedCakes) {
@@ -100,7 +100,7 @@ public class Order {
         return price;
     }
 
-    public boolean isQualifiedToDeliver(){
+    private boolean isQualifiedToDeliver(){
         return distance < 50 && getOrderPrice() >= 200;
     }
 
