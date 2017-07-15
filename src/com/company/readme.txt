@@ -1,6 +1,6 @@
-Klasa Configuration pozwala na dostosowanie opóźnień czasowych operacji odbioru i
-realizacji zamówień w celu przetestowania działania wielowątkowości oraz kilku
-innych parametrów. Wszystkie parametry opisane są w pliku.
+Klasa utilities.Configuration pozwala na dostosowanie opóźnień czasowych operacji odbioru i
+realizacji zamówień w celu przetestowania działania wielowątkowości, poziomu logowania
+oraz kilku innych parametrów. Wszystkie parametry opisane są w pliku.
 
 Zakładam, że aplikacja będzie symulacją pracy cukierni więc napiszę aplikację tak,
 aby zaprezentować nabyte umiejętności ;-) (Zbyt ambitne podejście mnie zablokowało...)
@@ -8,7 +8,8 @@ aby zaprezentować nabyte umiejętności ;-) (Zbyt ambitne podejście mnie zablo
 Zakładam, że cukiernia jest w stanie wykonać zdefiniowaną ilość zamówień na dobę.
 W razie rozrostu cukierni próg zamówień można zwiększyć. Po osiągnięciu progu
 piekarnia zamyka dzień i rozpoczyna wyrób wypieków. Po wykonaniu wszystkich
-wypieków piekarnia otwiera kolejny dzień.
+wypieków piekarnia otwiera kolejny dzień a klienci odbierają wykonane zamówienia,
+o których zostali poinformowani.
 
 Zakładam, że klient przy zamówieniu deklaruje metodę odbioru dla całego zamówienia,
 ponieważ zapłata za zamówienie połowy kwoty na miejscu i połowy kwoty przy dowozie
